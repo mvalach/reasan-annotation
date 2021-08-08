@@ -38,3 +38,6 @@ Pridal som tam dve tlacitka Save/Load, ktore pracuju s local storage (pozri v De
  - anotacie do kolekcie uklada podla zaciatku selectora. Zaciatok selectora je poradie znaku v texte, ktory je obaleny div wraperom, na ktory sa vztahuje recogito.js objekt. V kode to je: <pre>\<div id="my-content"\></pre> A anotacie teda uklada do kolekcie, podla tohto poradia - vyskytu v texte.
  - s JavasScriptom som davno nerobil, tak ten text je kostrbaty :)
  - spisme co by sa dalo dalej dorobit a vylepsovat postupne
+ 
+ ## to do
+ 
