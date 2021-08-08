@@ -1,7 +1,7 @@
 # reasan-annotation
 <br/>
 
-![Screenshot](screenshot.png)
+![Screenshot](Screenshot.png)
 
 <br/>
 ## argument annotation
