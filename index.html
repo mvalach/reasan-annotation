@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Annotation Demo | Development</title>
+	<link href="recogito-1.4.0/recogito.min.css" rel="stylesheet">
+	<script src="recogito-1.4.0/recogito.min.js"></script>
+	<style>
+		/* CSS styles for the description selector widget */
+		.descriptionselector-widget {
+		  padding:5px;
+		  border-bottom:1px solid #e5e5e5;
+		}
+
+		.descriptionselector-widget p {
+			margin: 0;
+			padding: 10px;
+		    width: 100%;
+		    box-sizing: border-box;
+		    outline: none;
+		    border: none;
+		    background-color: transparent;
+		    resize: none;
+		}
+
+		.descriptionselector-widget button {
+		  outline:none;
+		  border:none;
+		  display:inline-block;
+		  width:30px;
+		  height:20px;
+		  border-radius:30%;
+		  cursor:pointer;
+		  opacity:0.5;
+		  margin:4px;
+		}
+
+		.descriptionselector-widget button.selected,
+		.descriptionselector-widget button:hover {
+		  opacity:1;
+		}
+
+		.r6o-annotation.Argument.marker {
+		  border-color:rgba(255, 0, 0, 0.3);
+		  border-width:3;
+		  border-radius:15%;
+		  background-color:white;
+		}
+
+		.r6o-annotation.Argument.marker::before {
+	      content: "M";
+	      width: 30px;
+	      height: 20px;
+	      margin: 0px;
+	      padding: 3px;
+	      background: rgba(255, 0, 0, 0.3);
+	      border-radius: 30%;
+		}
+
+		.r6o-annotation.Assuring.term {
+		  border-color:rgba(0, 255, 0, 0.3);
+		  border-width:3;
+		  border-radius:15%;
+		  background-color:white;
+		}
+
+		.r6o-annotation.Assuring.term::before {
+	      content: "A";
+	      width: 30px;
+	      height: 20px;
+	      margin: 0px;
+	      padding: 3px;
+	      background: rgba(0, 255, 0, 0.3);
+	      border-radius: 30%;
+		}
+
+		.r6o-annotation.Guarding.term {
+		  border-color:rgba(0, 0, 255, 0.3);
+		  border-width:3;
+		  border-radius:15%;
+		  background-color:white;
+		}
+
+		.r6o-annotation.Guarding.term::before {
+	      content: "G";
+	      width: 30px;
+	      height: 20px;
+	      margin: 0px;
+	      padding: 3px;
+	      background: rgba(0, 0, 255, 0.3);
+	      border-radius: 30%;
+		}
+
+		.r6o-annotation.Discounting.term {
+		  border-color:rgba(255, 255, 0, 0.3);
+		  border-width:3;
+		  border-radius:15%;
+		  background-color:white;
+		}
+
+		.r6o-annotation.Discounting.term::before {
+	      content: "D";
+	      width: 30px;
+	      height: 20px;
+	      margin: 0px;
+	      padding: 3px;
+	      background: rgba(255, 255, 0, 0.3);
+	      border-radius: 30%;
+	    }
+
+		.r6o-annotation.Argumentative.performative {
+		  border-color:rgba(0, 255, 255, 0.3);
+		  border-width:3;
+		  border-radius:15%;
+		  background-color:white;
+		}
+
+		.r6o-annotation.Argumentative.performative::before {
+	      content: "AP";
+	      width: 30px;
+	      height: 20px;
+	      margin: 0px;
+	      padding: 3px;
+	      background: rgba(0, 255, 255, 0.3);
+	      border-radius: 30%;
+	    }
+
+		.r6o-annotation.Evaluative.term {
+		  border-color:rgba(128, 128, 0, 0.3);
+		  border-width:3;
+		  border-radius:15%;
+		  background-color:white;
+		}
+
+		.r6o-annotation.Evaluative.term::before {
+	      content: "E";
+	      width: 30px;
+	      height: 20px;
+	      margin: 0px;
+	      padding: 3px;
+	      background: rgba(128, 128, 0, 0.3);
+	      border-radius: 30%;
+	    }
+
+		.r6o-annotation.Rhetorical.device {
+		  border-color:rgba(128, 0, 128, 0.3);
+		  border-width:3;
+		  border-radius:15%;
+		  background-color:white;
+		}
+
+		.r6o-annotation.Rhetorical.device::before {
+	      content: "R";
+	      width: 30px;
+	      height: 20px;
+	      margin: 0px;
+	      padding: 3px;
+	      background: rgba(128, 0, 128, 0.3);
+	      border-radius: 30%;
+	    }
+	</style>
+</head>
+<body>
+	<div>
+      <button id="save-annotation">Save Annotation</button>
+      <button id="load-annotation">Load Annotation</button>
+    </div>
+	<div id="my-content" class="plaintext">
+		<h1>CLERK HIRE ALLOWANCE, HOUSE OF REPRESENTATIVES</h1>
+	        <p>
+	          	Mr. Speaker, I oppose this measure. I oppose it first because it is
+				expensive. I further oppose it because it is untimely.
+	        </p>
+	        <p>
+	          	I do not intend to belabor this first contention. We have been presented a
+				budget of about $82 billion. We have had recommended to us a whole series of additional programs or extensions of programs for priming the pump, for depressed areas, for the needy, for the unemployed, for river pollution projects, and recreation projects, aid to education, and many more. All are listed as “must” activities. These extensions are not within the budget. Furthermore, if business conditions are as deplorable as the newspapers indicate, the Government’s income will not be as high as anticipated. It is not enough to say we are spending so much now, a little more will not hurt. What we spend, we will either have to recover in taxes, or add to the staggering national debt.
+	        </p>
+    </div>
+    <div>
+    	<p><cite>Understanding Arguments</cite> by Walter Sinnott-Armstrong and Robert J. Fogelin (Part 1, Chapter 4, p. 78).</p>
+    </div>
+  	<script type="text/javascript">
+  		// Initialize wiget
+  		var DescriptionSelectorWidget = function(args) {
+
+  		  // Find a current description setting in the annotation, if any
+  		  var currentDescriptionBody = args.annotation ?
+  		    args.annotation.bodies.find(function(b) {
+  		      return b.purpose == 'describing';
+  		    }) : null;
+
+  		  // Keep the value in a variable
+  		  var currentDescriptionValue = currentDescriptionBody ? currentDescriptionBody.value : null;
+
+  		  // Triggers callbacks on user action
+  		  var addTag = function(evt) {
+  		    if (currentDescriptionBody) {
+  		      args.onUpdateBody(currentDescriptionBody, {
+  		        type: 'TextualBody',
+  		        purpose: 'describing',
+  		        value: evt.target.dataset.tag
+  		      });
+  		    } else {
+  		      args.onAppendBody({
+  		        type: 'TextualBody',
+  		        purpose: 'describing',
+  		        value: evt.target.dataset.tag
+  		      });
+  		    };
+  		  };
+
+  		  var setDescription = function(evt) {
+  		    	document.getElementById('label').innerHTML = evt.target.dataset.tag;
+  		    };
+
+  		  // This part renders the UI elements
+  		  var createDescriptionText = function() {
+  		  	var descriptionText = document.createElement('p');
+
+  		  	descriptionText.innerHTML = currentDescriptionValue ? currentDescriptionValue : 'Select description below...';
+  		  	descriptionText.className= 'r6o-editable-text';
+  		  	descriptionText.id = 'label'
+  		  	return descriptionText;
+  		  };
+
+  		  var createButton = function(value, text, color) {
+  		    var button = document.createElement('button');
+
+  		    if (value == currentDescriptionValue)
+  		      button.className = 'selected';
+
+  		    button.dataset.tag = value;
+  		    button.style.backgroundColor = color;
+  		    button.innerHTML = text;
+  		    button.addEventListener('click', addTag);
+  		    button.addEventListener('click', setDescription);
+  		    return button;
+  		  };
+
+  		  var container = document.createElement('div');
+  		  container.className = 'descriptionselector-widget';
+
+  		  var descriptionText = createDescriptionText();
+  		  var button1 = createButton('Argument marker', 'M', 'red');
+  		  var button2 = createButton('Assuring term', 'A', 'green');
+  		  var button3 = createButton('Guarding term', 'G', 'blue');
+  		  var button4 = createButton('Discounting term', 'D', 'yellow');
+  		  var button5 = createButton('Argumentative performative', 'AP', 'aqua');
+  		  var button6 = createButton('Evaluative term', 'E', 'olive');
+  		  var button7 = createButton('Rhetorical device', 'R', 'purple');
+
+  		  container.appendChild(descriptionText)
+  		  container.appendChild(button1);
+  		  container.appendChild(button2);
+  		  container.appendChild(button3);
+  		  container.appendChild(button4);
+  		  container.appendChild(button5);
+  		  container.appendChild(button6);
+  		  container.appendChild(button7);
+
+  		  return container;
+  		};
+
+  		// A matching formatter that sets the color according to the 'highlighting' body value
+  		var ColorFormatter = function(annotation) {
+  		  var highlightBody = annotation.bodies.find(function(b) {
+  		    return b.purpose == 'describing';
+  		  });
+
+  		  if (highlightBody)
+  		    return highlightBody.value;
+  		};
+
+    	(function() {
+    		// Intialize Recogito
+	      	var r = Recogito.init({
+	        	content: 'my-content',
+	        	widgets: [
+	        	    DescriptionSelectorWidget,
+	        	  ],
+	        	formatter: ColorFormatter
+	      	});
+
+	      	// Add an event handler
+	      	r.on('selectAnnotation', function(annotation) {
+	          console.log('selected', annotation);
+	        });
+
+	      	r.on('createAnnotation', function(annotation) {
+	      		console.log('created', annotation);
+	      		console.log('collection', r.getAnnotations())
+	      	});
+
+	      	r.on('updateAnnotation', function(annotation, previous) {
+	          	console.log('updated', previous, 'with', annotation);
+	          	console.log('collection', r.getAnnotations())
+	        });
+
+	        // Wire the Save/Load buttons
+        	document.getElementById('save-annotation').addEventListener('click', function() {
+          		var myCollection = r.getAnnotations();
+	          	const myJSON = JSON.stringify(myCollection);
+				localStorage.setItem("my-collection", myJSON)
+        	});
+
+        	document.getElementById('load-annotation').addEventListener('click', function() {
+          		//r.loadAnnotations('my-collection.json');
+          		var data = JSON.parse(localStorage.getItem("my-collection"));
+          		for (let i = 0; i < data.length; i++) {
+          			r.addAnnotation(data[i]);
+				};
+        	});
+    	})();
+    </script>
+</body>
+</html>
