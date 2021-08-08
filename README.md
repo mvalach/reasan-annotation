@@ -1,5 +1,9 @@
 # reasan-annotation
+<br/>
 
+![Screenshot](screenshot.png)
+
+<br/>
 ## argument annotation
 Recogito pracuje s typom Body anotacie "TextualBody". Defaultne pre tento typ ma nastaveny purpose "commenting/replaying" a "tagging". Tieto ucely pre anotovanie argumentacie mi neprisli vhodne, tak som vychadzal z toho, ze purpose argumentacnych anotacii je "describing" (je tu este moznost predefinovat purpose na "classifying"; moze to byt predmetom diskusie, no ak marker povazujem za (meta)opis casti textu, tak mi pride vhodnejsi "describing" purpose). Pri definovani purpose som vychadzal z [W3C Annotacneho modelu](https://www.w3.org/TR/annotation-model/), konkretne z ich [specifikacie Motivation a purpose](https://www.w3.org/TR/annotation-model/#motivation-and-purpose).
 
