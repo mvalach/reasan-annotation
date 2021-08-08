@@ -42,4 +42,5 @@ Pridal som tam dve tlacitka Save/Load, ktore pracuju s local storage (pozri v De
  ## to do
  - implementacia anotacie propozicneho obsahu via propositionalContenWidget
  - navrhnut realtion mode customizaciu
+ - file storage
  
