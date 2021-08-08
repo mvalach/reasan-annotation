@@ -36,11 +36,11 @@ Pridal som tam dve tlacitka Save/Load, ktore pracuju s local storage (pozri v De
 ## misc
  - nechal som v texte nejake console.logy aby si si mohol v console pozriet, ako to pracuje v ramci datovej struktury anotacie aj kolekcie.
  - anotacie do kolekcie uklada podla zaciatku selectora. Zaciatok selectora je poradie znaku v texte, ktory je obaleny div wraperom, na ktory sa vztahuje recogito.js objekt. V kode to je: <pre>\<div id="my-content"\></pre> A anotacie teda uklada do kolekcie, podla tohto poradia - vyskytu v texte.
- - s JavasScriptom som davno nerobil, tak ten text je kostrbaty :)
+ - s JavasScriptom som davno nerobil, tak ten kod je kostrbaty :)
  - spisme co by sa dalo dalej dorobit a vylepsovat postupne
  
  ## to do
  - implementacia anotacie propozicneho obsahu via propositionalContenWidget
- - navrhnut realtion mode customizaciu
+ - navrhnut relation mode customizaciu
  - file storage
  
