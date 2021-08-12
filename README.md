@@ -39,8 +39,21 @@ Pridal som tam dve tlacitka Save/Load, ktore pracuju s local storage (pozri v De
  - s JavasScriptom som davno nerobil, tak ten kod je kostrbaty :)
  - spisme co by sa dalo dalej dorobit a vylepsovat postupne
  
- ## to do
- - implementacia anotacie propozicneho obsahu via propositionalContenWidget
- - navrhnut relation mode customizaciu
- - JSON file storage
- 
+## TODOs
+
+### Features
+
++ Anotacia indikatorov sily recovych aktov
++ Anotacia indikatorov propozicneho obsahu recovych aktov
++ Anotacia nespojitych indikatorov
++ Anotacia celeho recoveho aktu
++ Anotacia (argumentacnych) vztahov medzi recovymi aktami
++ Perzistencia anotacii (lokalna a/alebo cez webservis)
++ Vizual anotacii (podla *Understanding Arguments*)
++ Dialogy pre vytvaranie anotacii (napr. podla (hypothes.is)[https://web.hypothes.is/])
++ CMS pre anotovane texty (napr. cez pelican)
+
+### Maintenance
+
++ Vyhodit JS a CSS do samostatnych suborov
++ Okomentovat JS skripty a CSS styly
