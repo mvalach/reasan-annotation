@@ -50,10 +50,10 @@ Pridal som tam dve tlacitka Save/Load, ktore pracuju s local storage (pozri v De
 + Anotacia (argumentacnych) vztahov medzi recovymi aktami
 + Perzistencia anotacii (lokalna a/alebo cez webservis)
 + Vizual anotacii (podla *Understanding Arguments*)
-+ Dialogy pre vytvaranie anotacii (napr. podla (hypothes.is)[https://web.hypothes.is/])
++ Dialogy pre vytvaranie anotacii (napr. podla [hypothes.is](https://web.hypothes.is/))
 + CMS pre anotovane texty (napr. cez pelican)
 
 ### Maintenance
 
 + Vyhodit JS a CSS do samostatnych suborov
-+ Okomentovat JS skripty a CSS styly
++ Okomentovat JS a CSS
